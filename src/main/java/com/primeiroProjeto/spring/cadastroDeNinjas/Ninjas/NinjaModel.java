@@ -26,7 +26,10 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // Long não precisa ser posto no contrutor, o java la usa ele no BD
     private String nome;
+
+    @Column(unique = true) // E-mail so poder ser email unico, so pode ser usado para um usuario
     private String email;
+
     private int idade;
 
     @ManyToOne // @ManyToOne um ninja tem uma unica missão
