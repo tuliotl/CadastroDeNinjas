@@ -24,12 +24,17 @@ public class NinjaModel {
     @Id // ID usado para o java conseguir diferenciar cada usuario no BD
     // Vai criar na sequencia até o infinito de IDs no BD, começando em 1
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id") //O nome que vai aparecer na coluna do banco de dados
     private Long id; // Long não precisa ser posto no contrutor, o java la usa ele no BD
+
+    @Column(name = "nome") //O nome que vai aparecer na coluna do banco de dados
     private String nome;
 
     @Column(unique = true) // E-mail so poder ser email unico, so pode ser usado para um usuario
     private String email;
 
+    @Column(name = "id") //O nome que vai aparecer na coluna do banco de dados
     private int idade;
 
     @ManyToOne // @ManyToOne um ninja tem uma unica missão
