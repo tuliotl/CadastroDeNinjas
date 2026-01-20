@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // Entity tranformar uma class em uma entidade no BD
@@ -33,6 +34,7 @@ public class MissoesModel {
     private String difuculdade;
 
     // @OneToMany uma missao para varios ninjas
-    @OneToMany (mappedBy = "missoes")
-    private List<MissoesModel> ninjas;
+    @OneToMany(mappedBy = "missoes")
+    private List<NinjaModel> ninjas;
+
 }
