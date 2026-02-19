@@ -19,7 +19,7 @@ target/
 *.iml
 *.ipr
 *.env
-data/
+data/testdb.mv.db
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
